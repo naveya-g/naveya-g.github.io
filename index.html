@@ -50,6 +50,11 @@
 				.row.quad-row { display: block; }
 				.quadrant { width: 100%; min-height: 14em; }
 			}
+
+			/* Cache-buster: force banner to use the new image file (avoids stale CDN cache on banner.jpg) */
+			#banner {
+				background-image: url("images/banner-v2.jpg") !important;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
