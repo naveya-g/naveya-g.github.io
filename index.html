@@ -25,8 +25,31 @@
 			}
 			.band-1 { background-color: #4FBDCB; }
 			.band-2 { background-color: #7C6FDE; }
-			.band-3.tiles { background-color: #E8A33D; }
-			.band-4.spotlights { background-color: #355070; }
+			.band-3 { background-color: #E8A33D; }
+			.band-4 { background-color: #355070; }
+
+			/* 2x2 quadrant grid */
+			#main { padding: 0 !important; }
+			.row.quad-row { display: flex; margin: 0 !important; }
+			.row.quad-row > * { border-top: 0 !important; }
+			.quadrant {
+				box-sizing: border-box;
+				min-height: 22em;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				padding: 3em 2em;
+			}
+			.quadrant .inner { max-width: 100%; padding: 0 !important; }
+			a.quadrant-link { text-decoration: none; cursor: pointer; transition: opacity 0.2s ease; }
+			a.quadrant-link:hover { opacity: 0.85; }
+			a.quadrant-link p { text-decoration: underline; }
+
+			@media screen and (max-width: 736px) {
+				.row.quad-row { display: block; }
+				.quadrant { width: 100%; min-height: 14em; }
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -47,8 +70,8 @@
 						<ul class="links">
 							<li><a href="#bio">Bio Data</a></li>
 							<li><a href="#research">Research</a></li>
-							<li><a href="#projects">Projects</a></li>
-							<li><a href="#travel">Travel</a></li>
+							<li><a href="#projects">AI/ML Projects</a></li>
+							<li><a href="#travel">Leisure &amp; Travel</a></li>
 							<li><a href="#contact">Contact</a></li>
 						</ul>
 						<ul class="actions stacked">
@@ -77,233 +100,40 @@
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Bio Data -->
-							<section id="bio" class="band band-1">
+						<div class="row quad-row">
+							<section id="bio" class="col-6 col-12-medium band band-1 quadrant">
 								<div class="inner">
 									<header class="major">
 										<h2>Bio Data</h2>
 									</header>
-
-									<div class="row gtr-200">
-										<div class="col-8 col-12-medium">
-											<p>PhD graduate with 7+ years of research experience, currently working as a Junior Data Scientist. Experienced in developing and deploying end-to-end ML and AI solutions — from predictive modelling and generative AI to LLM-based agentic pipelines — and designing scalable data pipelines that reduce manual workflows. Skilled at translating complex datasets into measurable business outcomes while collaborating across cross-functional teams.</p>
-										</div>
-										<div class="col-4 col-12-medium">
-											<ul class="contact-method-list">
-												<li><strong>Location:</strong> Chennai, India</li>
-												<li><strong>Email:</strong> <a href="mailto:gnaveya@gmail.com">gnaveya@gmail.com</a></li>
-												<li><strong>Phone:</strong> +91 98410 07983</li>
-												<li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/naveya-gopal">in/naveya-gopal</a></li>
-												<li><strong>GitHub:</strong> <a href="https://github.com/naveya-g">naveya-g</a></li>
-											</ul>
-										</div>
-									</div>
-
-									<hr class="major" />
-
-									<h3>Education</h3>
-									<div class="row gtr-uniform">
-										<div class="col-3 col-6-medium col-12-small">
-											<h4>2024 – 2025</h4>
-											<p>PG Program, AI &amp; Machine Learning<br />UT Austin / Great Lakes</p>
-										</div>
-										<div class="col-3 col-6-medium col-12-small">
-											<h4>2016 – 2023</h4>
-											<p>PhD, Theoretical Physics<br />University of Madras</p>
-										</div>
-										<div class="col-3 col-6-medium col-12-small">
-											<h4>2013 – 2015</h4>
-											<p>MSc, Physics<br />Loyola College, Chennai</p>
-										</div>
-										<div class="col-3 col-6-medium col-12-small">
-											<h4>2010 – 2013</h4>
-											<p>BSc, Physics<br />Ethiraj College for Women</p>
-										</div>
-									</div>
-
-									<hr class="major" />
-
-									<h3>Skills</h3>
-									<div class="row gtr-uniform">
-										<div class="col-4 col-6-medium col-12-small">
-											<h4>Languages</h4>
-											<p>Python, SQL, Fortran</p>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<h4>ML / AI Frameworks</h4>
-											<p>Scikit-Learn, XGBoost, LightGBM, TensorFlow, PyTorch, Keras, MLflow, Hugging Face</p>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<h4>LLM Orchestration</h4>
-											<p>LangChain, LangGraph, CrewAI</p>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<h4>Data &amp; Databases</h4>
-											<p>Pandas, NumPy, DuckDB, MongoDB, PostGIS</p>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<h4>Computer Vision</h4>
-											<p>OpenCV, Tesseract OCR</p>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<h4>Visualization</h4>
-											<p>Matplotlib, Seaborn, Tableau, Power BI</p>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<h4>Cloud &amp; APIs</h4>
-											<p>Azure Blob Storage, FastAPI</p>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<h4>Web Scraping</h4>
-											<p>Selenium, Playwright</p>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<h4>Tools</h4>
-											<p>Git, Docker, Mathematica</p>
-										</div>
-									</div>
 								</div>
 							</section>
-
-						<!-- Research -->
-							<section id="research" class="band band-2">
+							<section id="research" class="col-6 col-12-medium band band-2 quadrant">
 								<div class="inner">
 									<header class="major">
 										<h2>Research</h2>
 									</header>
-
-									<!--
-										EDIT ME: this section is set up for your PhD / academic research.
-										Replace or duplicate the block below for each research post you want to list.
-									-->
-									<span class="image main"><img src="images/pic07.jpg" alt="" /></span>
-
-									<h3>Research Scholar — University of Madras</h3>
-									<p><em>Jan 2016 – Aug 2023</em></p>
-									<p>Conducted research in theoretical nuclear physics, studying the stability and decay properties of heavy and superheavy nuclei. Built and validated theoretical models against experimental data, achieving 91% accuracy and demonstrating strong alignment between computational predictions and observed results.</p>
-
-									<div class="row gtr-uniform">
-										<div class="col-6 col-12-small">
-											<h4>Publications</h4>
-											<p>4 journal articles &amp; 7 conference proceedings. <a href="#">View Google Scholar profile →</a></p>
-										</div>
-										<div class="col-6 col-12-small">
-											<h4>Recognition</h4>
-											<p>SERB International Travel Grant — presented research at INPC 2022, Cape Town, South Africa.</p>
-										</div>
-									</div>
-
-									<!-- Add more research write-ups below this line -->
-
 								</div>
 							</section>
+						</div>
 
-						<!-- Projects (from GitHub) -->
-							<section id="projects" class="tiles band band-3">
-								<article>
-									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
-									</span>
+						<div class="row quad-row">
+							<a href="https://github.com/naveya-g" target="_blank" id="projects" class="col-6 col-12-medium band band-3 quadrant quadrant-link">
+								<div class="inner">
 									<header class="major">
-										<h3><a href="https://github.com/naveya-g/Industrial-Safety-NLP-Chatbot" class="link" target="_blank">Industrial Safety NLP Chatbot</a></h3>
-										<p>CNN / Bi-LSTM / RNN accident-risk classifier</p>
+										<h2>AI/ML Projects</h2>
 									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
+									<p>View my work on GitHub &rarr;</p>
+								</div>
+							</a>
+							<section id="travel" class="col-6 col-12-medium band band-4 quadrant">
+								<div class="inner">
 									<header class="major">
-										<h3><a href="https://github.com/naveya-g/Exploratory-Data-Analysis" class="link" target="_blank">Exploratory Data Analysis</a></h3>
-										<p>A collection of EDA projects &amp; code</p>
+										<h2>Leisure &amp; Travel</h2>
 									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="https://github.com/naveya-g/ML_Supervised" class="link" target="_blank">ML — Supervised</a></h3>
-										<p>Supervised learning projects &amp; code</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="https://github.com/naveya-g/ML_Ensemble_Techniques" class="link" target="_blank">ML — Ensemble Techniques</a></h3>
-										<p>Ensemble modelling projects &amp; code</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="https://github.com/naveya-g/ML_Feature_Engineering" class="link" target="_blank">ML — Feature Engineering</a></h3>
-										<p>Feature engineering projects &amp; code</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="https://github.com/naveya-g/SQL" class="link" target="_blank">SQL</a></h3>
-										<p>SQL queries &amp; business reports</p>
-									</header>
-								</article>
+								</div>
 							</section>
-
-						<!-- Travel -->
-							<section id="travel" class="spotlights band band-4">
-								<!--
-									EDIT ME: swap images/pic08-10.jpg for your own travel photos
-									(drop new files into /images and update the src below),
-									and replace the placeholder text with your own trip write-ups.
-									Duplicate a <section>...</section> block below for more trips.
-								-->
-								<section>
-									<a href="#" class="image">
-										<img src="images/pic08.jpg" alt="" data-position="center center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Trip Title</h3>
-											</header>
-											<p>Add a short story about this trip — where you went, what you did, and what made it memorable.</p>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a href="#" class="image">
-										<img src="images/pic09.jpg" alt="" data-position="top center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Trip Title</h3>
-											</header>
-											<p>Add a short story about this trip — where you went, what you did, and what made it memorable.</p>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a href="#" class="image">
-										<img src="images/pic10.jpg" alt="" data-position="25% 25%" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Trip Title</h3>
-											</header>
-											<p>Add a short story about this trip — where you went, what you did, and what made it memorable.</p>
-										</div>
-									</div>
-								</section>
-							</section>
+						</div>
 
 					</div>
 
@@ -339,21 +169,6 @@
 										<span class="icon solid alt fa-envelope"></span>
 										<h3>Email</h3>
 										<a href="mailto:gnaveya@gmail.com">gnaveya@gmail.com</a>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>+91 98410 07983</span>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span>Chennai, Tamil Nadu<br />
-										India</span>
 									</div>
 								</section>
 							</section>
