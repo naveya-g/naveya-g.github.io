@@ -56,6 +56,13 @@
 				background-image: url("images/banner-v2.jpg") !important;
 				background-position: center 40% !important;
 			}
+			/* Lighten the dark overlay so the actual photo shows through clearly */
+			#banner:after {
+				opacity: 0.35 !important;
+			}
+			#banner h1, #banner .content p, #banner .logo {
+				text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+			}
 		</style>
 	</head>
 	<body class="is-preload">
