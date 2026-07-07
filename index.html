@@ -18,15 +18,21 @@
 			.band { border-top: 0 !important; }
 			.band h1, .band h2, .band h3, .band h4, .band p, .band li {
 				color: #ffffff !important;
+				text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 			}
 			.band a:not(.button) {
 				color: #ffffff !important;
 				text-decoration: underline;
 			}
-			.band-1 { background-color: #4FBDCB; }
-			.band-2 { background-color: #7C6FDE; }
-			.band-3 { background-color: #E8A33D; }
-			.band-4 { background-color: #355070; }
+			.band-1, .band-2, .band-3, .band-4 {
+				background-image: linear-gradient(var(--tint), var(--tint)), url("images/banner-v2.jpg");
+				background-size: cover;
+				background-position: center;
+			}
+			.band-1 { --tint: rgba(142, 181, 157, 0.55); }
+			.band-2 { --tint: rgba(120, 150, 180, 0.55); }
+			.band-3 { --tint: rgba(212, 140, 110, 0.55); }
+			.band-4 { --tint: rgba(120, 95, 120, 0.58); }
 
 			/* 2x2 quadrant grid */
 			#main { padding: 0 !important; }
@@ -79,7 +85,7 @@
 					<nav id="menu">
 						<ul class="links">
 							<li><a href="bio-data.html">Bio Data</a></li>
-							<li><a href="#projects">Projects</a></li>
+							<li><a href="#projects">AI/ML Projects</a></li>
 							<li><a href="#research">Research</a></li>
 							<li><a href="#travel">Leisure &amp; Travel</a></li>
 							<li><a href="#contact">Contact</a></li>
@@ -118,16 +124,6 @@
 									</header>
 								</div>
 							</a>
-							<section id="research" class="col-6 col-12-medium band band-2 quadrant">
-								<div class="inner">
-									<header class="major">
-										<h2>Research</h2>
-									</header>
-								</div>
-							</section>
-						</div>
-
-						<div class="row quad-row">
 							<a href="https://github.com/naveya-g" target="_blank" id="projects" class="col-6 col-12-medium band band-3 quadrant quadrant-link">
 								<div class="inner">
 									<header class="major">
@@ -136,6 +132,16 @@
 									<p>View my work on GitHub &rarr;</p>
 								</div>
 							</a>
+						</div>
+
+						<div class="row quad-row">
+							<section id="research" class="col-6 col-12-medium band band-2 quadrant">
+								<div class="inner">
+									<header class="major">
+										<h2>Research</h2>
+									</header>
+								</div>
+							</section>
 							<section id="travel" class="col-6 col-12-medium band band-4 quadrant">
 								<div class="inner">
 									<header class="major">
